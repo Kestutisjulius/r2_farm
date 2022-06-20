@@ -16,11 +16,13 @@ function App() {
   },[]);
 
   useEffect(() =>{
-    axios.defaults.baseURL = 'http://localhost:3000';
+/**
+ *  axios.defaults.baseURL = 'http://localhost:3000';
     axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
     axios.defaults.headers.post['Content-Type'] ='application/x-www-form-urlencoded';
+ */
     if(null === createAnimal) return;
-    axios.post('http://localhost/php_farm_back/animals', )
+    axios.post('http://localhost/php_farm_back/animals')
     .then(response => console.log(response));
   },[createAnimal]);
 
